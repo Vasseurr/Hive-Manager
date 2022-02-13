@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hive_manager/core/constants/hive_keys.dart';
 import 'package:hive_manager/core/hive_models/hive_user.dart';
@@ -11,7 +10,7 @@ class HomeController extends GetxController {
   HomeController(this._repository) : assert(_repository != null);
 
   Future<void> saveUser(HiveUserObject hiveUserObject) async {
-    hiveUserObject.userId = 0;
+    hiveUserObject.userId = 1;
     //save user as key-value
     await HiveManager.instance
         .setIntValue(HiveKeys.USERID, hiveUserObject.userId!);
