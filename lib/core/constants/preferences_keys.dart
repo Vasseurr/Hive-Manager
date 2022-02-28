@@ -1,1 +1,0 @@
-enum PreferencesKeys { ISFIRST, TOKEN }
