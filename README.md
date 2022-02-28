@@ -170,6 +170,27 @@ enum HiveKeys {
 How to use?
 - Store as key-value
 ```
+await HiveManager.instance.setIntValue(HiveKeys.USERID, hiveUserObject.userId!);
+await HiveManager.instance.setStringValue(HiveKeys.FIRSTNAME, hiveUserObject.firstName!);
+await HiveManager.instance.setStringValue(HiveKeys.SURNAME, hiveUserObject.surname!);
+await HiveManager.instance.setStringValue(HiveKeys.USERNAME, hiveUserObject.userName!);
+await HiveManager.instance.setStringValue(HiveKeys.EMAIL, hiveUserObject.email!);
+```
+- Store as an object
+```
+final HiveUserObject _hiveUserObject = HiveUserObject();
+_hiveUserObject.userId = 0;
+_hiveUserObject.firstName =  "Okan";
+_hiveUserObject.surname = "Rüzgar";
+_hiveUserObject.username =  "Vasseurr";
+_hiveUserObject.email =  "okan.rzgr37@gmail.com";
+
+//save user as an object
+HiveManager.instance.addUser(hiveUserObject);
+ ```
+
+- Get values as key-value
+```
 Column(
   mainAxisAlignment: MainAxisAlignment.start,
   children: [
@@ -182,7 +203,7 @@ Column(
     ],
 ),
 ```
-- Store as an object
+- Get values as an object
 ```
 Column(
   mainAxisAlignment: MainAxisAlignment.start,
