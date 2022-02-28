@@ -3,7 +3,7 @@
 Hive is a lightweight and blazing fast key-value database
 
 ## Features
-- Cross platform: mobile, desktop
+- Cross platform -> mobile, desktop
 - Performance 
 - Strong encryption built in
 
