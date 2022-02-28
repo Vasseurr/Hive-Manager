@@ -18,7 +18,7 @@ You should add these packages into pubspec.yaml file like in the screenshot
 
 ![s1](https://user-images.githubusercontent.com/67058617/155972904-f51593a0-c23a-4435-9bda-c5f0b1ffa527.png)
 
-You can store values as key-value or as a hive object. If you want to store values as an object, you need to define a class that must extends HiveObject
+You can store values as key-value or as a hive object. If you want to store values as an object, you need to define a class that must extends HiveObject and
 HiveUserObject has a hive type and each variable defined as a hive field.
 
 ```
@@ -130,7 +130,7 @@ class HiveUserObjectAdapter extends TypeAdapter<HiveUserObject> {
           typeId == other.typeId;
 }
 ```
-In the Hive Manager, you need to give your type adapter in preferencesInit method and if you define another hive object, you need to organise methods as below
+In the Hive Manager, you need to give your type adapter in preferencesInit method and if you define another hive object, you need to organise methods (add, get...) as below
 ```
 static preferencesInit() async {
     await Hive.initFlutter();
@@ -170,11 +170,11 @@ enum HiveKeys {
 How to use?
 - Store as key-value
 ```
-await HiveManager.instance.setIntValue(HiveKeys.USERID, hiveUserObject.userId!);
-await HiveManager.instance.setStringValue(HiveKeys.FIRSTNAME, hiveUserObject.firstName!);
-await HiveManager.instance.setStringValue(HiveKeys.SURNAME, hiveUserObject.surname!);
-await HiveManager.instance.setStringValue(HiveKeys.USERNAME, hiveUserObject.userName!);
-await HiveManager.instance.setStringValue(HiveKeys.EMAIL, hiveUserObject.email!);
+await HiveManager.instance.setIntValue(HiveKeys.USERID, form.userId!);
+await HiveManager.instance.setStringValue(HiveKeys.FIRSTNAME, form.firstName!);
+await HiveManager.instance.setStringValue(HiveKeys.SURNAME, form.surname!);
+await HiveManager.instance.setStringValue(HiveKeys.USERNAME, form.userName!);
+await HiveManager.instance.setStringValue(HiveKeys.EMAIL, form.email!);
 ```
 - Store as an object
 ```
