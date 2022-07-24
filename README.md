@@ -16,7 +16,8 @@ You should add these packages into pubspec.yaml file like in the screenshot
 - https://pub.dev/packages/hive_generator
 - https://pub.dev/packages/build_runner
 
-![s1](https://user-images.githubusercontent.com/67058617/155972904-f51593a0-c23a-4435-9bda-c5f0b1ffa527.png)
+![dependencies](https://user-images.githubusercontent.com/67058617/180647093-1d55ba05-1740-4ba2-b58d-9f5ee5e1cbc0.png)
+
 
 You can store values as key-value or as a hive object. If you want to store values as an object, you need to define a class that must extends HiveObject and
 HiveUserObject has a hive type and each variable defined as a hive field.
