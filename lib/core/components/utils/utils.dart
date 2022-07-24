@@ -11,21 +11,12 @@ class Utils {
       {required String title, required String content}) {
     showDialog(
       context: context,
-      builder: (_) => new AlertDialog(
+      builder: (_) => AlertDialog(
         title: Text(
           title,
           textAlign: TextAlign.center,
         ),
         content: Text(content),
-        actions: <Widget>[
-          // ignore: deprecated_member_use
-          FlatButton(
-            child: const Text('Kapat'),
-            onPressed: () {
-              Navigator.of(context, rootNavigator: true).pop('dialog');
-            },
-          )
-        ],
       ),
     );
   }

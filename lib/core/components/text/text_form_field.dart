@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:hive_manager/core/constants/colors.dart';
 
 class VasseurrTFF extends StatelessWidget {
   TextEditingController? textEditingController;

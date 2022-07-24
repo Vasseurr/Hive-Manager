@@ -1,4 +1,3 @@
-import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:hive_manager/core/constants/hive_keys.dart';
 import 'package:hive_manager/core/hive_models/hive_user.dart';

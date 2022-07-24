@@ -2,12 +2,13 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hive_manager/core/components/buttons/custom_button.dart';
 import 'package:hive_manager/core/components/text/text_form_field.dart';
 import 'package:hive_manager/core/components/widgets/custom_scaffold.dart';
 import 'package:hive_manager/core/extension/context_extension.dart';
 import 'package:hive_manager/core/hive_models/hive_user.dart';
 import 'package:hive_manager/home/controller/home_controller.dart';
+
+import '../../core/components/button/vasseurr_bttn.dart';
 
 class HomePage extends StatelessWidget {
   HomePage({Key? key}) : super(key: key);
@@ -50,7 +51,6 @@ class HomePage extends StatelessWidget {
                 ),
                 SizedBox(height: context.height * 0.1),
                 VasseurrBttn(
-                    width: context.width * 0.8,
                     buttonText: "Kaydet",
                     onPressed: () async {
                       if (_formKey.currentState!.validate()) {
